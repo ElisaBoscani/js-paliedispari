@@ -12,36 +12,38 @@ if (userNumber <= 5) {
 } else {
   console.log("il numero non è valido");
 }
-//numero del compiuter
+//numero del computer
 function randomNumberPc() {
   const pcNumber = Math.floor(Math.random() * 5) + 1;
   return pcNumber;
 }
-const randomNumber = randomNumberPc();
-console.log(randomNumber);
+const cpuNumber = randomNumberPc();
+console.log(cpuNumber);
 //somma
-const som = userNumber + randomNumber;
 
-if (userNumber <= 5) {
-  console.log(som);
-} else {
-  console.log("manca un numero per la somma");
-}
 //stabiliamo se è pari o dispari
-function evenOodd() {
+//dichiariamo chi ha vinto
+function evenOrOdd() {
+  const sum = userNumber + cpuNumber;
+
+  if (userNumber <= 5) {
+    console.log(sum);
+  } else {
+    console.log("manca un numero per la somma");
+  }
+
   let risultato = "";
-  if (som % 2 == 0) {
+  if (sum % 2 === 0) {
     risultato = "pari";
   } else {
     risultato = "dispari";
   }
   console.log(risultato);
+
   if (userOption === risultato) {
     console.log("Hai vinto");
   } else {
     console.log("hai perso");
   }
 }
-const evenOdd = evenOodd();
-
-//dichiariamo chi ha vinto
+evenOrOdd();
