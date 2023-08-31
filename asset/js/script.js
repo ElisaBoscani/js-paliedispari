@@ -29,17 +29,19 @@ if (userNumber <= 5) {
 }
 //stabiliamo se è pari o dispari
 function evenOodd() {
+  let risultato = "";
   if (som % 2 == 0) {
-    console.log(" pari");
+    risultato = "pari";
   } else {
-    console.log("dispari");
+    risultato = "dispari";
+  }
+  console.log(risultato);
+  if (userOption === risultato) {
+    console.log("Hai vinto");
+  } else {
+    console.log("hai perso");
   }
 }
 const evenOdd = evenOodd();
 
 //dichiariamo chi ha vinto
-if (userOption !== evenOdd) {
-  console.log("Hai perso");
-} else {
-  console.log("hai vinto");
-}
